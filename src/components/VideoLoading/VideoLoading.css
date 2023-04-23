@@ -1,0 +1,13 @@
+.VideoLoading{
+    width: 5em;
+    height: 5em;
+    animation: rotate 1s ease infinite;
+}
+@keyframes rotate {
+    to {
+        transform: rotate(0deg);
+    }
+    from {
+        transform: rotate(360deg);
+    }
+}

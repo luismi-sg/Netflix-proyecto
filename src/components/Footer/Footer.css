@@ -1,0 +1,10 @@
+.Footer{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 4em 2em;
+    border-top: 1px solid rgb(60, 60, 60);
+    color: grey;
+    font-size: .8em;
+}

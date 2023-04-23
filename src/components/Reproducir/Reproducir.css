@@ -1,0 +1,57 @@
+.Reproducir{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: aliceblue;
+}
+.Reproducir-contenedor{
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.Reproducir-icon{
+    width: 3em;
+    height: 3em;
+    fill: #fff;
+    cursor: pointer;
+    animation: .5s all ease;
+}
+.Reproducir-icon:hover{
+    transform: scale(1.1);
+}
+.Navegar-contenedor{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 3em;
+}
+.Video-contenedor{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 3em;
+}
+.Video-imagen{
+
+}
+.Info-contenedor{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 3em;
+}
+.Info-ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+}
