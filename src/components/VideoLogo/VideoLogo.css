@@ -13,7 +13,7 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     
     background: url('/assets/fondo-videologo.png') no-repeat center center / cover;
 }
