@@ -86,7 +86,7 @@ const LogoComp = () => {
                 "Content-type" : "application/json"
             }
         }
-        fetch('https://netflix-api-luismi11.vercel.app/header/h1' , options )
+        fetch('https://netflix-api-luismi11.vercel.app/header/h1', options )
         .then(res => res.json())
         .then( data => setLogo( data.netflixData ))
         .catch( err => console.log( err ))
