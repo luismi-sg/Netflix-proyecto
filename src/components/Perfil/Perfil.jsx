@@ -46,7 +46,7 @@ export const Perfil = () => {
           }
         }
         e.preventDefault()
-        fetch('https://netflix-api-luismi11.vercel.app/usuarios' , options)
+        fetch('https://netflix-api-gamma.vercel.app/usuarios' , options)
         .then( res => res.json())
         .then( data => setUsers(data.netflixData))
         .catch( err => console.log( err ))
@@ -64,7 +64,7 @@ export const Perfil = () => {
         }
         }
         e.preventDefault()
-        fetch(`https://netflix-api-luismi11.vercel.app/usuarios/` , options)
+        fetch(`https://netflix-api-gamma.vercel.app/usuarios/` , options)
         .then( res => res.json())
         .then( data => setUsers(data.netflixData))
         .catch( err => console.log( err ))
@@ -72,7 +72,7 @@ export const Perfil = () => {
     }
 
     useEffect( () =>{
-    fetch('https://netflix-api-luismi11.vercel.app/usuarios')
+    fetch('https://netflix-api-gamma.vercel.app/usuarios')
     .then( res => res.json())
     .then( data => setUsers(data.netflixData))
     .catch( err => console.log( err ))
@@ -86,7 +86,7 @@ export const Perfil = () => {
                 "Content-type" : "application/json"
             }
         }
-        fetch(`https://netflix-api-luismi11.vercel.app/usuarios/id/${_id}` , options)
+        fetch(`https://netflix-api-gamma.vercel.app/usuarios/id/${_id}` , options)
         .then( res => res.json())
         .then( data => setUsers(data.netflixData))
         .catch( err =>  console.log( err ))

@@ -17,7 +17,7 @@ export const Reproducir = ( ) => {
                 "Content-type" : "application/json"
             }
         }
-        fetch(`https://netflix-api-luismi11.vercel.app/contenido/id/${ id }` , options )
+        fetch(`https://netflix-api-gamma.vercel.app/contenido/id/${ id }` , options )
         .then(res => res.json())
         .then( data => setContenidoById( data.netflixData[0] ))
         .catch( err => console.log( err ))
@@ -35,7 +35,7 @@ export const Reproducir = ( ) => {
                 "Content-type" : "application/json"
             }
         }
-        fetch('https://netflix-api-luismi11.vercel.app/' , options )
+        fetch('https://netflix-api-gamma.vercel.app/' , options )
         .then(res => res.json())
         .then( data => setAcciones( data.netflixData[0] ))
         .catch( err => console.log( err ))

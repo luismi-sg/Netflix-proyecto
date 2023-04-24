@@ -41,7 +41,7 @@ export const Login = () =>{
             }
         }
 
-        fetch('https://netflix-api-luismi11.vercel.app/login' , options)
+        fetch('https://netflix-api-gamma.vercel.app/login' , options)
         .then( res => res.json())
         .then( data => {
             console.log( data )
