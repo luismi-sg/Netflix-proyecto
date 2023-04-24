@@ -17,7 +17,7 @@ export const Carrousel = ( { tipoFiltro , filtro } ) => {
         }
         fetch('https://netflix-api-luismi11.vercel.app/contenido' , options )
         .then(res => res.json())
-        .then( data => setContenido( data.netflixData ))
+        .then( data => setContenido( data.netflixData )) 
         .catch( err => console.log( err ))
         .finally( () => controller.abort() )
 
