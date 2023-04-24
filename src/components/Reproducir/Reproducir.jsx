@@ -17,7 +17,7 @@ export const Reproducir = ( ) => {
                 "Content-type" : "application/json"
             }
         }
-        fetch(`http://localhost:4000/contenido/id/${ id }` , options )
+        fetch(`https://netflix-api-luismi11.vercel.app/contenido/contenido/id/${ id }` , options )
         .then(res => res.json())
         .then( data => setContenidoById( data.netflixData[0] ))
         .catch( err => console.log( err ))
@@ -35,7 +35,7 @@ export const Reproducir = ( ) => {
                 "Content-type" : "application/json"
             }
         }
-        fetch('http://localhost:4000/' , options )
+        fetch('https://netflix-api-luismi11.vercel.app/contenido/' , options )
         .then(res => res.json())
         .then( data => setAcciones( data.netflixData[0] ))
         .catch( err => console.log( err ))

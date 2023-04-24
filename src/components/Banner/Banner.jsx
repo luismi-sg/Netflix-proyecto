@@ -40,7 +40,7 @@ export const Banner = () => {
                 "Content-type" : "application/json"
             }
         }
-        fetch('http://localhost:4000/contenido' , options )
+        fetch('https://netflix-api-luismi11.vercel.app/contenido' , options )
         .then(res => res.json())
         .then( data => setBanner( data.netflixData ))
         .catch( err => console.log( err ))
