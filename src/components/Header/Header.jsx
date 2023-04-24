@@ -53,7 +53,7 @@ const MenuComp = () => {
                 "Content-type" : "application/json"
             }
         }
-        fetch('http://localhost:4000/header/menu' , options )
+        fetch('https://netflix-api-luismi11.vercel.app/header/menu' , options )
         .then(res => res.json())
         .then( data => setMenu( data.netflixData ))
         .catch( err => console.log( err ))
