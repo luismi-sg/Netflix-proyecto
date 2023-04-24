@@ -26,7 +26,6 @@ export const Banner = () => {
         const interval = setInterval(() => {
             actualizarBanner(bannerRandom)
         }, 7000)
-        console.log( activeBanner )
         return () => clearInterval(interval)
     })
     
