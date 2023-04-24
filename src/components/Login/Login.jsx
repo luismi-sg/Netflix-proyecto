@@ -14,8 +14,6 @@ export const Login = () =>{
         const comprobarLocal = JSON.parse( localStorage.getItem('usuarios') )
         if( comprobarLocal ){
             navigate("/app/main")
-        } else{
-            navigate("/")
         }
     } , [])
 
