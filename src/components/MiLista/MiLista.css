@@ -2,5 +2,13 @@
     max-width: 120rem;
     min-height: 100vh;
     background-color: #202020;
-    padding: 5em 3em 0em 3em;
+    padding: 7em 3em 0em 3em;
+}
+.MiLista-h2{
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+.MiLista .Carrousel-h2{
+    display: none;
 }
