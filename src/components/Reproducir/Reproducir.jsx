@@ -4,6 +4,7 @@ import './Reproducir.css'
 import { useNavigate, useParams } from 'react-router-dom'
 
 export const Reproducir = ( ) => {
+    const url = 'https://netflix-api-gamma.vercel.app' || 'http://localhost:4000'
     const [ contenidoById , setContenidoById ] = useState([])
 
     const { id } = useParams()
@@ -17,7 +18,7 @@ export const Reproducir = ( ) => {
                 "Content-type" : "application/json"
             }
         }
-        fetch(`https://netflix-api-gamma.vercel.app/contenido/id/${ id }` , options )
+        fetch(`${url}/contenido/id/${ id }` , options )
         .then(res => res.json())
         .then( data => setContenidoById( data.netflixData[0] ))
         .catch( err => console.log( err ))
@@ -35,7 +36,7 @@ export const Reproducir = ( ) => {
                 "Content-type" : "application/json"
             }
         }
-        fetch('https://netflix-api-gamma.vercel.app/' , options )
+        fetch(`${url}/` , options )
         .then(res => res.json())
         .then( data => setAcciones( data.netflixData[0] ))
         .catch( err => console.log( err ))

@@ -3,7 +3,7 @@ import { useEffect , useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 export const Perfil = () => {
-
+    const url = 'https://netflix-api-gamma.vercel.app' || 'http://localhost:4000'
     const navigate = useNavigate()
     const [ users , setUsers ] = useState([])
     const cerrarHandler = () => navigate("/app/main")
@@ -46,7 +46,7 @@ export const Perfil = () => {
           }
         }
         e.preventDefault()
-        fetch('https://netflix-api-gamma.vercel.app/usuarios' , options)
+        fetch(`${url}/usuarios`, options)
         .then( res => res.json())
         .then( data => setUsers(data.netflixData))
         .catch( err => console.log( err ))
@@ -64,7 +64,7 @@ export const Perfil = () => {
         }
         }
         e.preventDefault()
-        fetch(`https://netflix-api-gamma.vercel.app/usuarios/` , options)
+        fetch(`${url}/usuarios/` , options)
         .then( res => res.json())
         .then( data => setUsers(data.netflixData))
         .catch( err => console.log( err ))
@@ -72,7 +72,7 @@ export const Perfil = () => {
     }
 
     useEffect( () =>{
-    fetch('https://netflix-api-gamma.vercel.app/usuarios')
+    fetch(`${url}/usuarios`)
     .then( res => res.json())
     .then( data => setUsers(data.netflixData))
     .catch( err => console.log( err ))
@@ -86,7 +86,7 @@ export const Perfil = () => {
                 "Content-type" : "application/json"
             }
         }
-        fetch(`https://netflix-api-gamma.vercel.app/usuarios/id/${_id}` , options)
+        fetch(`${url}/usuarios/id/${_id}` , options)
         .then( res => res.json())
         .then( data => setUsers(data.netflixData))
         .catch( err =>  console.log( err ))

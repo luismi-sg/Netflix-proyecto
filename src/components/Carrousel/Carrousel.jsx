@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
  
 export const Carrousel = ( { tipoFiltro , filtro } ) => {
 
+    const url = 'https://netflix-api-gamma.vercel.app' || 'http://localhost:4000'
     const [ contenido , setContenido ] = useState([])
 
     useEffect( () => {
@@ -15,7 +16,7 @@ export const Carrousel = ( { tipoFiltro , filtro } ) => {
                 "Content-type" : "application/json"
             }
         }
-        fetch('https://netflix-api-gamma.vercel.app/contenido' , options )
+        fetch(`${url}/contenido` , options )
         .then(res => res.json())
         .then( data => setContenido( data.netflixData )) 
         .catch( err => console.log( err ))

@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 export const Login = () =>{
+    const url = 'https://netflix-api-gamma.vercel.app' || 'http://localhost:4000'
     const navigate = useNavigate()
     const [ login , setLogin ] = useState({
         email :  '' ,
@@ -41,7 +42,7 @@ export const Login = () =>{
             }
         }
 
-        fetch('https://netflix-api-gamma.vercel.app/login' , options)
+        fetch(`${url}/login` , options)
         .then( res => res.json())
         .then( data => {
             console.log( data )
