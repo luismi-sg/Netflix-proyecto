@@ -11,6 +11,7 @@
     /* CAMBIARA DE BANNER POR CADA PELICULA CON OPACIDAD */
     background: url('') no-repeat center right / cover fixed;
     opacity: 0;
+    animation: aparecerv1 1s forwards;
     transition: all 1s ease;
 }
 .isActiveBanner{
@@ -38,7 +39,9 @@
 }
 .Banner-titulo{
     position: relative;
-    width: 35%;
+    width: 40%;
+    animation: aparecer 1s ;
+    transition: all 1s ease;
 }
 /* .Titulo-h2{
 
@@ -82,4 +85,23 @@
 }
 .Titulo-button:hover{
     opacity: 0.6;
+}
+
+@keyframes aparecer {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes aparecerv1 {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }

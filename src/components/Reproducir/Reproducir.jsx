@@ -24,7 +24,6 @@ export const Reproducir = ( ) => {
         .catch( err => console.log( err ))
         .finally( () => controller.abort() )
     } , [])
-    console.log( contenidoById )
 
     const [ acciones , setAcciones ] = useState([])
     useEffect( () => {

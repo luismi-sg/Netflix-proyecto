@@ -12,14 +12,14 @@ export const Banner = () => {
 
     let bannerRandom = Number(Math.ceil(Math.random() * (banner.length - 1)))
 
-    const [ activeBanner, setActiveBanner ] = useState( 0 )
+    const [ activeBanner, setActiveBanner ] = useState( bannerRandom )
     // activeBanner = setActiveBanner( bannerRandom )
 
     const actualizarBanner = ( nuevoIndice ) => {
         if ( nuevoIndice < 0 ) {
             nuevoIndice = banner.length - 1
         } else if ( nuevoIndice > banner.length ){
-            nuevoIndice = 0
+            nuevoIndice = bannerRandom
         }
         setActiveBanner( nuevoIndice )
     }
@@ -49,9 +49,8 @@ export const Banner = () => {
         
     } , [] ) 
     const reproducirHandler = ( _id ) => {
-
-        // navigate(`/reproducir/${_id}`)
-        navigate('/reproducir')
+        navigate(`/reproducir/${_id}`)
+        // navigate('/reproducir')
     }
 
     return(
@@ -60,7 +59,7 @@ export const Banner = () => {
                         <div key={ _id }
                         className='Banner-contenedor'
                         style = {{ backgroundImage: `url(${ banner.src })`,
-                                opacity: `${ activeBanner === id ? '1' : '0' }`
+                                display: `${ activeBanner === id ? 'flex' : 'none'}`
                                 }}>
                             <div className='Banner-fondonegro' >
                             {/* FALTA CAMBIAR DE FONDO POR CADA UNA */}

@@ -1,9 +1,13 @@
 import './MiLista.css'
+import { Carrousel } from '../Carrousel/Carrousel'
 
-export const MiLista = () => {
+export const MiLista = ( ) => {
     return( 
         <div className='MiLista'>
-            Soy Mi lista
+            <div className='MiLista-contenedor'>
+                
+                <Carrousel tipoFiltro='milista' filtro='true'/>
+            </div>
         </div>
     )
 }
