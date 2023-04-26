@@ -4,6 +4,8 @@ import './Banner.css'
 
 export const Banner = () => {
 
+    const url = 'https://netflix-api-gamma.vercel.app' || 'http://localhost:4000'
+
     const navigate = useNavigate()
 
     const [ banner , setBanner ] = useState([])
@@ -39,7 +41,7 @@ export const Banner = () => {
                 "Content-type" : "application/json"
             }
         }
-        fetch('https://netflix-api-gamma.vercel.app/contenido' , options )
+        fetch(`${url}/contenido` , options )
         .then(res => res.json())
         .then( data => setBanner( data.netflixData ))
         .catch( err => console.log( err ))
