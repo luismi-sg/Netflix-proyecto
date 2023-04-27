@@ -1,9 +1,14 @@
 .Main{
+    margin: 0 auto;
     max-width: 120rem;
     min-height: 100vh;
     background-color: #141414;
 }
+.Main-contenedor{
+
+}
 .Carrouseles-wrapper{
+    max-width: 120rem;
     position: relative;
     top: -10rem;
 }
