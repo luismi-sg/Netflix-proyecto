@@ -69,10 +69,10 @@ const Article = ( { _id , titulo , clase , duracion , anho , palabrasClave , tem
     }
     
     return(
-        <div className='Contenedor-position' onPointerLeave={ cancelHandler }>
+        <div className='Contenedor-position' onPointerLeave={ cancelHandler } >
             <article key= { _id } className={`Carrousel-article ${ infoActiva ? 'ArticleActive': '' }`}>
                 <div
-                onPointerDown={ infoHandler }
+                onClick={ infoHandler }
                 className={`Article-portada ${ infoActiva ? 'infoActiva': '' }`}>
                     <img className={`Article-img ${ infoActiva ? 'infoActiva': '' }`} src={ img.src } alt={ img.alt }  />
                 </div>

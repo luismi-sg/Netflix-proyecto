@@ -1,3 +1,4 @@
+
 .Banner{
     margin: 0 auto;
     width: 100%;
@@ -200,6 +201,8 @@
     }
     .Banner-fondonegro{
         align-items: end;
+        padding: 1.5rem 0;
+        
     }
     .Banner-contenedor{
         background: url('') no-repeat center center / cover;
@@ -211,13 +214,17 @@
         width: 100%;
     }
     .Titulo-button {
+        margin: 1em 0 0 0;
         padding: 0.5em 1em;
     }
     .Titulo-img{
         width: 12rem;
         margin: 0 0 1em 0;
     }
+    .Titulo-h3{
+        display: none;
+    }
     .Titulo-p{
-        font-size: .9em;
+        font-size: .8em;
     }
 }

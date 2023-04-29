@@ -5,9 +5,18 @@ import { useNavigate, useParams } from 'react-router-dom'
 
 export const Reproducir = ( ) => {
     const url = 'https://netflix-api-gamma.vercel.app' || 'http://localhost:4000'
-    const [ contenidoById , setContenidoById ] = useState([])
 
     const { id } = useParams()
+
+    const [ contenidoById , setContenidoById ] = useState([])
+    const bannerFondo = contenidoById.banner
+
+    const [ acciones , setAcciones ] = useState([])
+
+    const { bandera , reproducion , opcionesRep , flechaAtras } = acciones
+
+    const navigate = useNavigate()
+    const volverHandler = () => navigate("/")
 
     useEffect( ( ) => {
         let controller = new AbortController()
@@ -25,7 +34,6 @@ export const Reproducir = ( ) => {
         .finally( () => controller.abort() )
     } , [])
 
-    const [ acciones , setAcciones ] = useState([])
     useEffect( () => {
         let controller = new AbortController()
         let options = {
@@ -42,20 +50,15 @@ export const Reproducir = ( ) => {
         .finally( () => controller.abort() )
         
     } , [])
-    
-    const { bandera , reproducion , opcionesRep , flechaAtras } = acciones
-
-    const navigate = useNavigate()
-    const volverHandler = () => navigate("/")
-    
+    // 
     return( 
         <div className="Reproducir">
-            <div className="Reproducir-contenedor">
+            <div className="Reproducir-contenedor" style = {  bannerFondo &&  { backgroundImage: `url(${ bannerFondo.src })`}}>
                 <div className='Navegar-contenedor'>
                     { flechaAtras && 
                             <img onPointerDown={ volverHandler } className='Reproducir-icon' src={flechaAtras.src} alt={flechaAtras.alt} />
                     }
-                    { bandera && 
+                    { bandera &&
                         <img className='Reproducir-icon' src={ bandera.src } alt={ bandera.alt } />
                     }
                 </div >
@@ -64,15 +67,15 @@ export const Reproducir = ( ) => {
                 </div>
                 <div className='Info-contenedor'>
                     <ul className='Info-ul'>
-                        {   reproducion && reproducion.map( ( { id , src , alt } ) =>  
-                            <li key={id} ><img className='Reproducir-icon' src={src} alt={alt} /></li>
+                        {   reproducion && reproducion.map( ( { id , src , alt } ) => 
+                            <li key={ id } ><img className='Reproducir-icon' src={ src } alt={ alt } /></li>
                         )}
                         
                     </ul>
                     <h2 className='Info-h2'> {contenidoById.titulo} </h2>
                     <ul className='Info-ul'>
                         { opcionesRep && opcionesRep.map( ({ id , src , alt}) => 
-                            <li key={id}><img className='Reproducir-icon' src={src} alt={alt} /></li>
+                            <li key={ id }><img className='Reproducir-icon' src={ src } alt={ alt } /></li>
                         )}
                     </ul>
                 </div>

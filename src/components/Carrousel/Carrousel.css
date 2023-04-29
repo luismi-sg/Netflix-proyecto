@@ -1,10 +1,10 @@
 .Carrousel{
     width: 100%;
-    padding: 2em 3em 1em 3em;
+    padding: 2em 3em 0em 3em;
 }
 
 .Carrousel-contenedor{
-    margin-bottom: 2em;
+    margin-bottom: 0em;
 }
 .Carrousel-h2{
     color: #fff;
@@ -103,7 +103,12 @@
     font-weight: 500;
 }
 @media (max-width: 900px){
-    
+    .Carrousel{
+        padding: 2em 3em 2em 3em;
+    }
+    .Carrousel-contenedor{
+        margin-bottom: 2em;
+    }
 }
 @media (max-width: 600px){
     .Carrousel{

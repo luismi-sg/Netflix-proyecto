@@ -14,8 +14,10 @@
 .Login-header{
     margin: 0 auto;
     max-width: 120rem;
+    
 }
 .Login-h1{
+    padding: 2em;
     max-width: 9rem;
 }
 .Login-img{

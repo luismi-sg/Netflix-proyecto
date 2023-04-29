@@ -1,5 +1,5 @@
 .Perfil{
-    background-color: #212121;
+    background-color: #141414;
     min-height: 100vh;
     width: 100%;
 
@@ -85,21 +85,19 @@
 .NuevoPerfil-btn:hover{
     opacity: 1;
 }
+.NuevoPerfil-Img-wrapper{
+    border-radius: 5px;
+    filter: saturate(2);
+}
 .NuevoPerfil-img{
     display: block;
     height: 12em;
     width: 12em;
     border-radius: 5px;
+    mix-blend-mode: luminosity;
 }
 .NuevoPerfil-img:hover{
     border: 2px solid #fff;
-}
-.NuevoPerfil-img::after{
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: blueviolet;
 }
 .NuevoPerfil-botones{
     width: calc(100% - 4em);
@@ -131,7 +129,7 @@
     padding: 2em;
     position: absolute; /*  PONER EN ABSOLUTE  */
     top: 0;
-    background-color: #212121;
+    background-color: #000;
     display: none;
     flex-flow: column nowrap;
     justify-content: center;
@@ -170,6 +168,9 @@
     border-radius: 2px;
     color: #fff;
     background-color: #484848;
+}
+.NuevoPerfil-input:last-child{
+    margin: 0;
 }
 .NuevoPerfil-submit{
     cursor: pointer;
