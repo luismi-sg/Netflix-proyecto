@@ -64,6 +64,7 @@ export const Reproducir = ( ) => {
                 </div >
                 <div className='Video-contenedor'>
                     <VideoLoading />
+                    <p className='Video-p'> Rota el dispositivo </p>
                 </div>
                 <div className='Info-contenedor'>
                     <ul className='Info-ul'>

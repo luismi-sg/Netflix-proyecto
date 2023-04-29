@@ -43,12 +43,17 @@
 }
 .Video-contenedor{
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column    nowrap;
     justify-content: center;
     align-items: center;
     width: 100%;
     padding: 3em;
     position: relative;
+    gap: 1em;
+}
+.Video-p{
+    display: none;
+    opacity: .5;
 }
 .Info-contenedor{
     display: flex;
@@ -67,41 +72,20 @@
     gap: 1.5em;
 }
 @media (max-width: 900px) {
-    .Reproducir-contenedor{
-        transform: rotate(90deg);
-        display: block;
-        width: 100%;
-        height: 100vw;
-        position: relative;
-    }
     .Reproducir-icon{
         width: 2em;
         height: 2em;
     }
-    .Navegar-contenedor{
-        position: absolute;
-        top: 0;
-    }
-    .Video-contenedor{
-        position: absolute;
-        top: calc(50% - 3em);
-    }
-    .Info-contenedor{
-        position: absolute;
-        bottom: 0;
-    }
     .Navegar-contenedor,
     .Video-contenedor,
     .Info-contenedor{
-        width: 100vh;
         padding: 1rem;
     }
-}
-@media (max-width: 600px) {
-    .Reproducir-contenedor{
-        width: 100%;
-        height: 100vw;
+    .Video-p{
+        display: block;
     }
+}
+@media screen and (max-width: 950px) and (max-height: 420px){
     .Reproducir-icon{
         width: 1em;
         height: 1em;
@@ -109,7 +93,32 @@
     .Navegar-contenedor,
     .Video-contenedor,
     .Info-contenedor{
-        width: 100vh;
         padding: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .Reproducir-icon{
+        width: 1em;
+        height: 1em;
+    }
+    .Navegar-contenedor,
+    .Video-contenedor,
+    .Info-contenedor{
+        padding: 1rem;
+    }
+    .Video-p{
+        display: block;
+    }
+}
+@media screen and (max-width: 900px) and (max-height: 450px){
+    .Video-p{
+        display: none;
+    }
+}
+@media (max-width: 450px) {
+    .Info-contenedor {
+        flex-flow: column nowrap;
+        gap: 1em;
     }
 }
