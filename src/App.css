@@ -1,5 +1,6 @@
 .App{
     background-color: #000;
+    min-width: 20rem;
 }
 .Netflix-intro{
     width: 100%;

@@ -59,11 +59,14 @@ export const Login = () =>{
     }
     return(
             <div className='Login'>
-                <header className="Login-header">
-                    <h1 className="Login-h1">
-                        <img src='./assets/Netflix_Logo_PMS.png' alt="Logo Netflix" className="Login-img" />
-                    </h1>
-                </header>
+                <div className='Header-wrapper'>
+                    <header className="Login-header">
+                        <h1 className="Login-h1">
+                            <img src='/assets/Netflix_Logo_PMS.png' alt="Logo Netflix" className="Login-img" />
+                        </h1>
+                    </header>
+                </div>
+                
                 <div className='Login-container'>
                     <h2 className="Login-h2">Iniciar sesión</h2>
 
@@ -74,7 +77,9 @@ export const Login = () =>{
                     </form>
                     { logeado && <p className='Error-p'> { logeado } </p>}
                 </div>
-                <footer className="Login-footer"></footer>
+                <footer className="Login-footer">
+                    <p>© 1997 - 2023 Netflix, inc</p>
+                </footer>
             </div>
     )
 }

@@ -151,7 +151,7 @@ export const Perfil = () => {
             </div>
             <div className={`PopPerfil-contenedor ${ isActive ? 'isActive': '' }`}>
                 <h2 className='Perfil-h1'>Añadir Perfil</h2>
-                <p className='NuevoPerfil-h2'>Crea un perfil para otra persona que usa Netflix</p>
+                <p className='NuevoPerfil-p'>Crea un perfil para otra persona que usa Netflix</p>
 
                 <form onSubmit={ formHandler } className='NuevoPerfil-form' >
                     <div className='Input-contenedor'>
@@ -188,7 +188,7 @@ export const Perfil = () => {
             </div>
             <div className={`PopPerfil-contenedor ${ isActiveEditar ? 'isActive': '' }`}>
                 <h2 className='Perfil-h1'>Editar Perfil</h2>
-                <p className='NuevoPerfil-h2'>Edita los datos de tu perfil de Netflix</p>
+                <p className='NuevoPerfil-p'>Edita los datos de tu perfil de Netflix</p>
 
                 <form onSubmit={ formUpdateHandler } className='NuevoPerfil-form' >
                     <div className='Input-contenedor'>

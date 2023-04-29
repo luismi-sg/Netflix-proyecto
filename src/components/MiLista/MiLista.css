@@ -12,3 +12,11 @@
 .MiLista .Carrousel-h2{
     display: none;
 }
+.MiLista-contenedor{
+    min-height: 80vh;
+}
+@media (max-width: 600px){
+    .MiLista{
+        padding: 5em 1em 0em;
+    }
+}

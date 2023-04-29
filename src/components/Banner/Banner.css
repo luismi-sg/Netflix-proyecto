@@ -1,15 +1,15 @@
 .Banner{
+    margin: 0 auto;
     width: 100%;
     min-height: 100vh;
 
 }
 .Banner-contenedor{
     width: 100%;
-    max-width: 120rem;
     min-height: 100vh;
     position: absolute;
     /* CAMBIARA DE BANNER POR CADA PELICULA CON OPACIDAD */
-    background: url('') no-repeat center right / cover fixed;
+    background: url('') no-repeat center center / cover fixed;
     opacity: 0;
     animation: aparecerv1 1s forwards;
     transition: all 1s ease;
@@ -21,7 +21,7 @@
 .Banner-fondonegro{
     width: 100%;
     height: 100%;
-    padding: 3rem;
+    padding: 3rem 0 ;
     position: absolute;
     display: flex;
     flex-flow: row nowrap;
@@ -37,15 +37,18 @@
     top: 0;
     left: 0;
 }
-.Banner-titulo{
+.BannerTitulo-wrapper{
+    width: 100%;
+    padding: 0 3em;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.BannerTitulo{
+    width: 55%;
     position: relative;
-    width: 40%;
     animation: aparecer 1s ;
     transition: all 1s ease;
 }
-/* .Titulo-h2{
-
-} */
 .Titulo-img{
     width: 30rem;
     margin: 0 0 2em 0;
@@ -103,5 +106,118 @@
     }
     to{
         opacity: 1;
+    }
+}
+@media (max-width:1500px) {
+    @media (max-width: 900px) {
+        .Banner,
+        .Banner-fondonegro,
+        .isActiveBanner
+        {
+            min-height: 80vh;
+        }
+        .Banner-contenedor{
+            min-height: 80vh;
+            background: url('') no-repeat center center / cover;
+        }
+        .BannerTitulo{
+            width: 60%;
+        }
+        .Titulo-img{
+            width: 25rem;
+        }
+        .Titulo-h3{
+            font-size: .9em;
+        }
+        .Titulo-p{
+            font-size: 1.2em;
+        }
+    }
+}
+@media (max-width: 900px) {
+    .Banner,
+    .Banner-fondonegro,
+    .isActiveBanner
+    {
+        min-height: 70vh;
+    }
+    .Banner-contenedor{
+        min-height: 70vh;
+        background: url('') no-repeat center center / cover;
+    }
+    .BannerTitulo{
+        width: 80%;
+    }
+    .Titulo-img{
+        width: 20rem;
+    }
+    .Titulo-button {
+        background-color: #202020;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 700;
+        padding: 1em 1em;
+    }
+    .Titulo-h3{
+        font-size: .8em;
+    }
+    .Titulo-p{
+        font-size: 1.2em;
+    }
+}
+@media screen and (max-width: 950px) and (max-height: 420px){
+    .Banner,
+    .Banner-fondonegro,
+    .isActiveBanner
+    {
+        min-height: 120vh;
+    }
+    .Banner-contenedor{
+        min-height: 120vh;
+        background: url('') no-repeat center center / cover;
+    }
+    .BannerTitulo{
+        width: 100%;
+    }
+    .Titulo-button {
+        padding: 0.5em 1em;
+    }
+    .Titulo-img{
+        width: 12rem;
+        margin: 0 0 1em 0;
+    }
+    .Titulo-p{
+        font-size: .9em;
+    }
+}
+
+@media (max-width: 600px) {
+    .Banner,
+    .Banner-contenedor,
+    .Banner-fondonegro,
+    .isActiveBanner{   
+        min-height: 60vh;
+    }
+    .Banner-fondonegro{
+        align-items: end;
+    }
+    .Banner-contenedor{
+        background: url('') no-repeat center center / cover;
+    }
+    .BannerTitulo-wrapper{
+        padding: 1em;
+    }
+    .BannerTitulo{
+        width: 100%;
+    }
+    .Titulo-button {
+        padding: 0.5em 1em;
+    }
+    .Titulo-img{
+        width: 12rem;
+        margin: 0 0 1em 0;
+    }
+    .Titulo-p{
+        font-size: .9em;
     }
 }

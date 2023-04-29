@@ -6,6 +6,9 @@ export const Header = () => {
 
 const navigate = useNavigate()
 
+const [ menuIsActive , setmenuIsActive ] = useState(false)
+const menuhandler = () => setmenuIsActive(!menuIsActive)
+
 const CerrarSesion = () => {
     localStorage.removeItem('usuarios')
     navigate("/")
@@ -14,8 +17,13 @@ const CerrarSesion = () => {
         <div className='Header'>
             <div className='Header-container'>
                 <div className='Header-menu'>
+                    <div onPointerDown={ menuhandler } className='Menu-toggle'>
+                        <svg fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                            <path d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                    </div>
                     <LogoComp />
-                    <MenuComp />
+                    <MenuComp menuIsActive={ menuIsActive } setmenuIsActive={ setmenuIsActive }/>
                 </div>
                 <div className='Header-session'>
                     <ul className="Session-ul">
@@ -40,10 +48,10 @@ const CerrarSesion = () => {
 }
 
 {/* COMPONENTE DEL LOGO NETFLIX */}
-const MenuComp = () => {
+const MenuComp = ( {menuIsActive , setmenuIsActive } ) => {
 
     const [ menu , setMenu ] = useState([])
-
+    const menuhandler = () => setmenuIsActive(!menuIsActive)
     useEffect( () => {
         let controller = new AbortController()
         let options = {
@@ -61,14 +69,23 @@ const MenuComp = () => {
     } , [])
 
     return(
-
-        <ul className="Menu-ul">
-            { menu && menu.map( ({_id , href , texto }) =>   
-                <li key={_id} className="Menu-li">
-                    <NavLink to={href} title={texto} className="Menu-a"> {texto} </NavLink>
+        <nav className={`Menu-contenedor ${ menuIsActive ? 'MenuisActive' : '' }`}>
+            
+            <ul className='Menu-ul'>
+                <li className='Menu-toggle' onPointerDown={ menuhandler } >
+                    <svg fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                        <path d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
                 </li>
-            )}
-        </ul>
+                { menu && menu.map( ({ _id , href , texto }) =>   
+
+                    <li key={_id} className="Menu-li" >
+                        <NavLink to={ href } title={ texto } className="Menu-a" > {texto} </NavLink>
+                    </li>
+                )}
+            </ul>    
+        </nav>
+        
     )
 }
 

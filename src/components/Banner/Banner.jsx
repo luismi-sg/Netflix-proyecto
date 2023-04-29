@@ -63,14 +63,16 @@ export const Banner = () => {
                                 }}>
                             <div className='Banner-fondonegro' >
                             {/* FALTA CAMBIAR DE FONDO POR CADA UNA */}
-                                <div className='Banner-titulo' >  
-                                    <h2 className='Titulo-h2'>
-                                        <img className='Titulo-img' src={ imgTitulo.src } alt="" />
-                                    </h2>
-                                    <h3 className='Titulo-h3'> {genero} </h3>
-                                    <p className='Titulo-p'> {descripcion} </p>
-                                    <button onPointerDown={ () => reproducirHandler( _id ) } className='Titulo-button reproducir'>Reproducir</button>
-                                    <button onPointerDown={ () => reproducirHandler( _id ) } className='Titulo-button masinfo'>Más información</button>
+                                <div className='BannerTitulo-wrapper'>
+                                    <div className='BannerTitulo' >  
+                                        <h2 className='Titulo-h2'>
+                                            <img className='Titulo-img' src={ imgTitulo.src } alt="" />
+                                        </h2>
+                                        <h3 className='Titulo-h3'> {genero} </h3>
+                                        <p className='Titulo-p'> {descripcion} </p>
+                                        <button onPointerDown={ () => reproducirHandler( _id ) } className='Titulo-button reproducir'>Reproducir</button>
+                                        <button onPointerDown={ () => reproducirHandler( _id ) } className='Titulo-button masinfo'>Más información</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

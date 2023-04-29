@@ -21,18 +21,17 @@
 }
 .Perfil-h1{
     color: #a1a1a1;
-    font-size: 3.5em;
+    font-size: 3em;
     font-weight: 500;
     line-height: 1em;
-    margin-bottom: 1em;
+    margin-bottom: .5em;
 }
 .Perfil-grid{
     max-width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2em;
-
-    margin: 3em 0em 6em;
+    margin: 6em 0em;
 }
 .Perfil-btn{
     cursor: pointer;
@@ -106,13 +105,22 @@
     width: calc(100% - 4em);
     border-top: 1px solid #666;
     padding-top: 1em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
-
 .NuevoPerfil-h2{
-    font-size: 1.8em;
+    font-size: 1.6em;
+    line-height: 1.2em;
     font-weight: 500;
-    margin: 1em 0;
+    text-transform: capitalize;
+    margin: .5em 0;
+}
+.NuevoPerfil-p{
+    font-size: 1.4em;
+    hyphens: none;
+    line-height: 1.3em;
+    font-weight: 400;
+    margin: .5em 0;
+    color: #fff;
 }
 .PopPerfil-contenedor{
     width: 100%;
@@ -122,6 +130,7 @@
     text-align: center;
     padding: 2em;
     position: absolute; /*  PONER EN ABSOLUTE  */
+    top: 0;
     background-color: #212121;
     display: none;
     flex-flow: column nowrap;
@@ -175,4 +184,50 @@
 .NuevoPerfil-submit:hover{
     background-color: #e50914;
     color: #fff;
+}
+@media (max-width:1500px){
+    .Perfil-grid{
+        margin: 4em 0em;
+    }
+}
+@media (max-width: 900px){
+    .Perfil{
+        padding: 3em 1em;
+    }
+    .Perfil-h1{
+        color: #a1a1a1;
+        font-size: 2em;
+        font-weight: 500;
+        line-height: 1em;
+        margin-bottom: 1em;
+    }
+    .Perfil-grid {
+        gap: 0em;
+        margin: 2em 0em;
+    }
+    .NuevoPerfil-img,
+    .Crear-img{
+        height: 10em;
+        width: 10em;
+    }
+}
+@media (max-width: 600px){
+    .Perfil-h1{
+        margin-bottom: .5em;
+    }
+    .PopPerfil-contenedor{
+        padding: 2em 1em;
+    }
+    .Input-contenedor{
+        flex-flow: column;
+    }
+    .NuevoPerfil-contenedor{
+        margin-bottom: 2em;
+    }
+    .NuevoPerfil-input{
+        font-size:  1em ;
+    }
+    .NuevoPerfil-submit{
+        font-size: 1em;
+    }
 }
