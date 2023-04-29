@@ -11,9 +11,9 @@ export const Reproducir = ( ) => {
     const [ contenidoById , setContenidoById ] = useState([])
     const bannerFondo = contenidoById.banner
 
-    const [ acciones , setAcciones ] = useState([])
+    const [ todoAcciones , setTodoAcciones ] = useState([])
 
-    const { bandera , reproducion , opcionesRep , flechaAtras } = acciones
+    const { bandera , reproducion , opcionesRep , flechaAtras } = todoAcciones
 
     const navigate = useNavigate()
     const volverHandler = () => navigate("/")
@@ -45,12 +45,11 @@ export const Reproducir = ( ) => {
         }
         fetch(`${url}/` , options )
         .then(res => res.json())
-        .then( data => setAcciones( data.netflixData[0] ))
+        .then( data => setTodoAcciones( data.netflixData[0] ))
         .catch( err => console.log( err ))
         .finally( () => controller.abort() )
         
     } , [])
-    // 
     return( 
         <div className="Reproducir">
             <div className="Reproducir-contenedor" style = {  bannerFondo &&  { backgroundImage: `url(${ bannerFondo.src })`}}>
