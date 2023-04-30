@@ -5,19 +5,22 @@ import { useNavigate, useParams } from 'react-router-dom'
 
 export const Reproducir = ( ) => {
     const url = 'https://netflix-api-gamma.vercel.app' || 'http://localhost:4000'
-
+    
+    // USEPARAMS PARA RECIBIR LOS PARAMETROS ENVIADOS
     const { id } = useParams()
-
+    
     const [ contenidoById , setContenidoById ] = useState([])
     const bannerFondo = contenidoById.banner
 
     const [ todoAcciones , setTodoAcciones ] = useState([])
 
+    //DECONSTRUCCION DEL CONTENIDO RECIBIDO EN EL FETCH DE ACCIONES
     const { bandera , reproducion , opcionesRep , flechaAtras } = todoAcciones
 
     const navigate = useNavigate()
     const volverHandler = () => navigate("/")
 
+    //FETCH QUE RECIBE EL CONTENIDO CON EL ID ANTES RECIBIDO EN LOS PARAMS
     useEffect( ( ) => {
         let controller = new AbortController()
         let options = {
@@ -34,6 +37,7 @@ export const Reproducir = ( ) => {
         .finally( () => controller.abort() )
     } , [])
 
+    //FETCH QUE RECIBE EL CONTENIDO DE ACCIONES
     useEffect( () => {
         let controller = new AbortController()
         let options = {

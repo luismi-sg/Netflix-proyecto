@@ -6,9 +6,11 @@ export const Header = () => {
 
 const navigate = useNavigate()
 
+//FUNCIONES QUE ACTIVAN O DESACTIVAN EL MENU EN VERSION MOBILE
 const [ menuIsActive , setmenuIsActive ] = useState(false)
 const menuhandler = () => setmenuIsActive(!menuIsActive)
 
+// FUNCION QUE ELIMINA EL LOCAL STORAGE
 const CerrarSesion = () => {
     localStorage.removeItem('usuarios')
     navigate("/")
@@ -47,11 +49,12 @@ const CerrarSesion = () => {
     )
 }
 
-{/* COMPONENTE DEL LOGO NETFLIX */}
+{/* COMPONENTE DEL MENU NETFLIX */}
 const MenuComp = ( {menuIsActive , setmenuIsActive } ) => {
 
     const [ menu , setMenu ] = useState([])
     const menuhandler = () => setmenuIsActive(!menuIsActive)
+    // FETCH AL CONTENIDO DEL MENU
     useEffect( () => {
         let controller = new AbortController()
         let options = {
@@ -71,15 +74,14 @@ const MenuComp = ( {menuIsActive , setmenuIsActive } ) => {
     return(
         <nav className={`Menu-contenedor ${ menuIsActive ? 'MenuisActive' : '' }`}>
             
-            <ul className='Menu-ul'>
-                <li className='Menu-toggle' onPointerDown={ menuhandler } >
+            <ul className='Menu-ul' >
+                <li className='Menu-toggle' onClick={ menuhandler } >
                     <svg fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                         <path d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                     </svg>
                 </li>
                 { menu && menu.map( ({ _id , href , texto }) =>   
-
-                    <li key={_id} className="Menu-li" >
+                    <li key={_id} className="Menu-li" onClick={ () => setmenuIsActive(!menuIsActive) }>
                         <NavLink to={ href } title={ texto } className="Menu-a" > {texto} </NavLink>
                     </li>
                 )}
@@ -89,7 +91,7 @@ const MenuComp = ( {menuIsActive , setmenuIsActive } ) => {
     )
 }
 
-{/* COMPONENTE DEL MENU NETFLIX */}
+{/* COMPONENTE DEL LOGO NETFLIX */}
 const LogoComp = () => {
 
     const [ logo , setLogo ] = useState([])

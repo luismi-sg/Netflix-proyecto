@@ -114,4 +114,8 @@
     .Carrousel{
         padding: 1em;
     }
+    .ArticleActive {
+        transform: scale(1);
+        position: static;
+    }
 }

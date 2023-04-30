@@ -6,7 +6,7 @@ import { Outlet, useNavigate } from 'react-router-dom'
 
 export const Plantilla = () => {
 
-    // useEffect Comprobar que en el LocalStorage existe la propiedad que se crea en el login
+    // Comprobar que en el LocalStorage existe la propiedad que se crea en el login
 
     const navigate = useNavigate()
 

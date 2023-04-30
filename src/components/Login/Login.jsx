@@ -5,12 +5,13 @@ import { useNavigate } from 'react-router-dom'
 export const Login = () =>{
     const url = 'https://netflix-api-gamma.vercel.app' || 'http://localhost:4000'
     const navigate = useNavigate()
+
     const [ login , setLogin ] = useState({
         email :  '' ,
         pass:  '' 
     })
 
-    // COMPROBAR EL LOCALSTORAGE
+    // COMPROBAR EL LOCALSTORAGE Y SI ESTA ALMACENADO NAVEGA AL MAIN
     useEffect( () => {
         const comprobarLocal = JSON.parse( localStorage.getItem('usuarios') )
         if( comprobarLocal ){
@@ -18,7 +19,7 @@ export const Login = () =>{
         }
     } , [])
 
-
+    // STATE QUE RECIBE EL CONTENIDO DE USUARIOS DEL FETCH
     const [ logeado , setLogeado ] = useState( null )
 
     // HANDLER DEL INPUT

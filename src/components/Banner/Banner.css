@@ -206,6 +206,7 @@
     }
     .Banner-contenedor{
         background: url('') no-repeat center center / cover;
+        min-width: 20rem;
     }
     .BannerTitulo-wrapper{
         padding: 1em;

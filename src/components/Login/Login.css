@@ -17,8 +17,8 @@
     
 }
 .Login-h1{
-    padding: 2em;
-    max-width: 9rem;
+    padding: 1em 2em ;
+    max-width: 15rem;
 }
 .Login-img{
     width: 100%;
@@ -75,7 +75,7 @@
         background: url('/assets/fondo-login.webp') no-repeat center center / cover;
     }
     .Login-h1{
-        max-width: 6rem;
+        max-width: 12rem;
     }
     .Login-container{
         padding: 2em;

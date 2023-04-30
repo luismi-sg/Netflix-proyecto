@@ -3,10 +3,11 @@ import { useState , useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
  
 export const Carrousel = ( { tipoFiltro , filtro } ) => {
-
+    // URL DE LA API QUE CONECTA LA BBDD CON LA APP
     const url = 'https://netflix-api-gamma.vercel.app' || 'http://localhost:4000'
     const [ contenido , setContenido ] = useState([])
 
+    // FETCH PARA LLAMAR A TODO EL CONTENIDO 
     useEffect( () => {
         let controller = new AbortController()
         let options = {
@@ -30,7 +31,7 @@ export const Carrousel = ( { tipoFiltro , filtro } ) => {
         </div>
     )
 }
-
+// COMPONENTE CONTENEDOR DEL CARRUSEL QUE RECIBE LOS FILTROS
 const Contenedor = ( { contenido , filtro , tipoFiltro } ) => {
 
     const [ filtrar , setFiltrar ] = useState([])
@@ -50,15 +51,16 @@ const Contenedor = ( { contenido , filtro , tipoFiltro } ) => {
     </div>
     )
 }
-
-const Article = ( { _id , titulo , clase , duracion , anho , palabrasClave , temporadas , genero , img , a  } ) => {
+// COMPONENTE DE CADA ELEMENTO INDIVIDUAL DEL CARRUSEL, RECIBE LOS DETALLES INDIVIDUALES.
+const Article = ( { _id , titulo , duracion , anho , temporadas , genero , img  } ) => {
 
     const navigate = useNavigate()
+    // FUNCION QUE NAVEGA A REPRODUCIR SEGUN CADA CONTENIDO, ENVIA UN _ID
     const playHandler = ( _id ) => {
         navigate(`/reproducir/${ _id }`)
         console.log( _id )
     }
-
+    //FUNCIONES Y STATE PARA ACTIVAR Y DESACTIVAR LA INFO DE CADA ARTICULO DEL CARRUSEL
     const [ infoActiva , setInfoActiva ] = useState(false)
 
     const infoHandler = ( ) => {

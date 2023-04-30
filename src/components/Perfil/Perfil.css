@@ -138,6 +138,10 @@
 .isActive{
     display: flex;
 }
+
+.Perfil-contenedor.isActive {
+    display: none;
+}
 .NuevoPerfil-form{
     display: flex;
     flex-flow: column nowrap;
@@ -188,7 +192,7 @@
 }
 @media (max-width:1500px){
     .Perfil-grid{
-        margin: 4em 0em;
+        margin: 2em 0 0;
     }
 }
 @media (max-width: 900px){
