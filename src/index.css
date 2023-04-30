@@ -1,14 +1,5 @@
 @charset "UTF-8";
-/*
 
-  Con este reset vamos a resolver:
-    👉 Unificar el uso de Custom Properties
-    👉 Problemas de box-model más generales
-    👉 Problemas con imagenes, vídeos e iconos svg
-    👉 Problemas con tipografías y etiquetas input en formularios
-    👉 Unificar la tipografía de todas las etiquetas de una web
-
-*/
 /* Aquí definimos las Custom properties */
 :root {
   --negro: #393939;
@@ -135,11 +126,6 @@ svg {
   fill: currentColor;
 }
 
-/* (Probándolo, no usar en producción) En el caso de añadir una  */
-/* p svg{
-  display: inline;
-  width: initial;
-} */
 /* Configuramos la tipografía para toda la web */
 body {
   min-height: 100vh;
