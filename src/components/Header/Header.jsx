@@ -10,6 +10,10 @@ const navigate = useNavigate()
 const [ menuIsActive , setmenuIsActive ] = useState(false)
 const menuhandler = () => setmenuIsActive(!menuIsActive)
 
+const [ buscarIsActive , setBuscarIsActive ] = useState(false)
+const buscarHandler = () => setBuscarIsActive(!buscarIsActive)
+
+
 // FUNCION QUE ELIMINA EL LOCAL STORAGE
 const CerrarSesion = () => {
     localStorage.removeItem('usuarios')
@@ -29,8 +33,9 @@ const CerrarSesion = () => {
                 </div>
                 <div className='Header-session'>
                     <ul className="Session-ul">
-                        <li className="Session-li">
-                            <img src="/assets/buscar.svg" alt="" className="Session-icon" />
+                        <li onClick={ buscarHandler } className={`Session-li ${ buscarIsActive ? 'buscarisActive' : '' }`}>
+                            <img src="/assets/buscar.svg" alt="" className={`Session-icon ${ buscarIsActive ? 'buscarisActive' : '' }`} />
+                            <p className={`Session-p ${ buscarIsActive ? 'buscarisActive' : '' }`}>Títulos, personas, géneros </p>
                         </li>
                         <li className="Session-li">
                             <NavLink to="/perfil" className="Session-a">

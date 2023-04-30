@@ -28,6 +28,12 @@
 .Menu-toggle{
     display: none;
 }
+.Menu-a{
+    transition: all .5s ease;
+}
+.Menu-a:hover{
+    opacity: .5;
+}
 .Header-h1{
     max-width: 7rem;
 }
@@ -44,6 +50,7 @@
 .Session-ul{
     display: flex;
     flex-flow: row nowrap;
+    align-items: center;
     gap: 1.5rem;
     opacity: .8;
 }
@@ -51,6 +58,12 @@
 .Session-a{
     width: 1.8em;
     height: 1.8em;
+    transition: all .5s ease-in-out;
+    overflow: hidden;
+}
+.Session-li:nth-child(2):hover,
+.Session-li:nth-child(3):hover{
+    transform: scale(1.1);
 }
 .Session-btn,
 .Session-icon{
@@ -58,6 +71,44 @@
     height: 100%;
     cursor: pointer;
     fill: #fff;
+}
+.Session-li.buscarisActive{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 14em;
+    height: 2.2em;
+    background-color: #000000dd;
+    border: 2px solid #fff;
+    animation: aparecerBuscar 1s ease;
+    transition: all .5s ease-in-out;
+    overflow: hidden;
+}
+.Session-icon.buscarisActive{
+    padding: .1em;
+    width: 1.8em;
+    height: 1.8em;
+    margin: 0 .5em;
+}
+.Session-p{
+    opacity: 0;
+}
+.Session-p.buscarisActive{
+    font-size: .8em;
+
+    color: #858585;
+    opacity: 1;
+    animation: aparecerBuscar 1s ease;
+    transition: all 1s ease-in-out;
+}
+@keyframes aparecerBuscar {
+    0% {
+        transform: translateX(-1);
+    }
+    100%{
+        transform: translateX(0);
+    }
 }
 @media (max-width:1200px){
     .Menu-ul{

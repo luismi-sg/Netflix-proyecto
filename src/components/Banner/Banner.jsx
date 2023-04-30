@@ -11,25 +11,14 @@ export const Banner = ({ tipoFiltro , filtro }) => {
     const [ banner , setBanner ] = useState([])
 
     //FUNCION PARA ASIGNAR UN NUMERO ALEATORIO ENTRE EL 0 Y EL ULTIMO INDICE DEL ITEM DEL CONTENIDO BANNERS
-    let bannerRandom = Number(Math.ceil(Math.random() * (banner.length - 1)))
+    let bannerRandom = Number(Math.floor(Math.random() * banner.length))
 
     const [ activeBanner, setActiveBanner ] = useState( bannerRandom )
 
-    // ASIGNA UN NUEVO INDICE Y LO GUARDA EN UN STATE
-    const actualizarBanner = ( nuevoIndice ) => {
-        if ( nuevoIndice < 0 ) {
-            nuevoIndice = banner.length - 1
-        } else if ( nuevoIndice > banner.length ){
-            nuevoIndice = bannerRandom
-        }
-        setActiveBanner( nuevoIndice )
-    }
-
     // UTLIZAR EL INDICE ANTERIOR PARA HACER UNA FUNCION CON INTERVALOS PARA ALTERNAR EL CONTENIDO DE LOS BANNERS
     useEffect(() => {
-        
         const interval = setInterval(() => {
-            actualizarBanner(bannerRandom)
+            setActiveBanner(bannerRandom)
         }, 7000)
         return () => clearInterval(interval)
     })
@@ -79,8 +68,16 @@ export const Banner = ({ tipoFiltro , filtro }) => {
                                 </h2>
                                 <h3 className='Titulo-h3'> {genero} </h3>
                                 <p className='Titulo-p'> {descripcion} </p>
-                                <button onPointerDown={ () => reproducirHandler( _id ) } className='Titulo-button reproducir'>Reproducir</button>
-                                <button onPointerDown={ () => reproducirHandler( _id ) } className='Titulo-button masinfo'>Más información</button>
+                                <div className='Button-Wrapper'>
+                                    <button onPointerDown={ () => reproducirHandler( _id ) } className='Titulo-button reproducir'>
+                                        <img className='Button-icon' src='/assets/play-negro.svg' alt=''/>
+                                        <p className='Button-p'>Reproducir</p>
+                                    </button>
+                                    <button onPointerDown={ () => reproducirHandler( _id ) } className='Titulo-button masinfo'>
+                                        <img className='Button-icon' src='/assets/masinfo.svg' alt=''/>
+                                        <p className='Button-p'>Más información</p>
+                                    </button>
+                                </div> 
                             </div>
                         </div>
                     </div>
