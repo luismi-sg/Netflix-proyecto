@@ -51,6 +51,7 @@
 }
 .Login-p{
     color: lightgrey;
+    font-size: 0.8rem;
 }
 .Login-input.submit{
     background-color: #e50914;
