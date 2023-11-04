@@ -74,8 +74,8 @@ export const Login = () =>{
                     <form className='Login-form' onSubmit={ formHandler }>
                         <input className='Login-input' name='email' type="email" value={login.email || ''} onChange={ e => inputHandler(e) } placeholder='Escribe tu usuario' />
                         <input className='Login-input' name='pass' type="password" value={login.pass || ''} onChange={ e => inputHandler(e) } placeholder='Escribe tu contraseña'/>
-                        <p>Usuario: pikachu@gmail.com</p>
-                        <p>Contraseña: pika</p>
+                        <p className='Login-p'>Usuario: pikachu@gmail.com</p>
+                        <p className='Login-p'>Contraseña: pika</p>
                         <input className='Login-input submit' type="submit" value="Iniciar sesión" />
                     </form>
                     { logeado && <p className='Error-p'> { logeado } </p>}

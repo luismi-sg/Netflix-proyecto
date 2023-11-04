@@ -47,7 +47,10 @@
     border-radius: 0.5em;
     border-bottom: 1px solid #e87c03;
     background-color: #3e3e3e;;
-    margin-bottom: 2em;
+    margin: 2em 0;
+}
+.Login-p{
+    color: lightgrey;
 }
 .Login-input.submit{
     background-color: #e50914;
