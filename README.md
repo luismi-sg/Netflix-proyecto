@@ -6,13 +6,22 @@ This is a replica of Netflix's Interface with a Login System on a BBDD (CRUD)
 
 🌐 <a target="_blank" href="https://netflix-proyecto.vercel.app/" > https://netflix-proyecto.vercel.app/ </a>
 
-## Installation
+## Installation & Access
 
 Use the NPM on node.js
 
 ```javascript
 
 npm run dev
+
+```
+
+Once you are on the app, you need to log in:
+
+```javascript
+
+user : pikachu@gmail.com
+password : pika
 
 ```
 
