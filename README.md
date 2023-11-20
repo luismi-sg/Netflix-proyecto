@@ -12,7 +12,7 @@ This is a replica of Netflix's Interface with a Login System on a BBDD (CRUD)
 ## Installation & Access
 1. Download and Install node_modules inside the App folder
    
-```javascript
+```.js
 
 npm install
 
@@ -20,7 +20,7 @@ npm install
 
 2. Use the NPM on node.js to start the server
 
-```javascript
+```.js
 
 npm run dev
 
@@ -28,7 +28,7 @@ npm run dev
 
 3. Once you are on the app, you need to log in:
 
-```javascript
+```.js
 
 user : pikachu@gmail.com
 password : pika
@@ -66,8 +66,11 @@ Connecting the API (Express JS) to the main APP was one of the hardest parts of 
 It was a demanding work but I enjoyed with the final results. 
 
 ✅ Use of Components and Hooks on React JS
+
 ✅ Connect to an API with Express JS
+
 ✅ Make my own DataBase on Mongo DB
+
 ✅ Execute a CRUD that links DB with APP
 
 ## Author
