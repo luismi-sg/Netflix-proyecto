@@ -12,7 +12,7 @@ This is a replica of Netflix's Interface with a Login System on a BBDD (CRUD)
 ## Installation & Access
 1. Download and Install node_modules inside the App folder
    
-```nodejs
+```javascript
 
 npm install
 
