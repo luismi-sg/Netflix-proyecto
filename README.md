@@ -7,12 +7,12 @@ This is a replica of Netflix's Interface with a Login System on a BBDD (CRUD)
 🌐 <a target="_blank" href="https://netflix-proyecto.vercel.app/" >https://netflix-proyecto.vercel.app/ </a>
 
 
-<img width="2223" alt="Netflix-Home" src="https://github.com/luismi-sg/Netflix-proyecto/assets/120020439/1999852d-6f51-4e1e-bc65-f6decef4b10c">
+<img alt="Netflix-Home" src="https://github.com/luismi-sg/Netflix-proyecto/assets/120020439/1999852d-6f51-4e1e-bc65-f6decef4b10c">
 
 ## Installation & Access
 1. Download and Install node_modules inside the App folder
    
-```.js
+```nodejs
 
 npm install
 
@@ -20,7 +20,7 @@ npm install
 
 2. Use the NPM on node.js to start the server
 
-```.js
+```javascript
 
 npm run dev
 
@@ -28,7 +28,7 @@ npm run dev
 
 3. Once you are on the app, you need to log in:
 
-```.js
+```javascript
 
 user : pikachu@gmail.com
 password : pika
@@ -67,7 +67,7 @@ It was a demanding work but I enjoyed with the final results.
 
 ✅ Use of Components and Hooks on React JS
 
-✅ Connect to an API with Express JS
+✅ Connect to an API <a target="_blank" href="https://github.com/luismi-sg/NETFLIX-API" > Netflix API </a>with Express JS
 
 ✅ Make my own DataBase on Mongo DB
 
@@ -76,6 +76,7 @@ It was a demanding work but I enjoyed with the final results.
 ## Author
 
 Web - <a target="_blank" href="https://luismiguel.vercel.app/" >Luis Miguel SG</a>
+DataBase & API - <a target="_blank" href="https://luismiguel.vercel.app/" >Luis Miguel SG</a>
 
 ## License
 
